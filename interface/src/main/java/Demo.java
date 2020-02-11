@@ -1,27 +1,19 @@
 public class Demo {
     public static void main(String[] args) {
         Passenger ming = new Passenger("小明", 300);
-        Bus bus = new Bus(300);
-        SelfDrive selfDrive = new SelfDrive(500);
-        Plane plane = new Plane(1000);
-        Train train = new Train(400);
-
+        Vehicle bus = new Bus(300);
+        Vehicle selfDrive = new SelfDrive(500);
+        Vehicle plane = new Plane(1000);
+        Vehicle train = new Train(400);
         int money = ming.getMoney();
 
-        if (money >= bus.getPrice()) {
-            System.out.println(bus.useVehicle());
-        }
+        System.out.println(bus.useVehicle(money));
 
-        if (money >= plane.getPrice()) {
-            System.out.println(plane.useVehicle());
-        }
+        System.out.println(plane.useVehicle(money));
 
-        if (money >= selfDrive.getPrice()) {
-            System.out.println(selfDrive.useVehicle());
-        }
+        System.out.println(selfDrive.useVehicle(money));
 
-        if (money >= train.getPrice()) {
-            System.out.println(train.useVehicle());
-        }
+        System.out.println(train.useVehicle(money));
+
     }
 }
